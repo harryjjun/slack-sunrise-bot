@@ -20,11 +20,11 @@ def slacker():
         assert error.response['error']  # str like 'invalid_auth', 'channel_not_found'
         print(f"Got an error: {error.response['error']}")
 
-schedule.every().monday.at('20:20').do(slacker)
-schedule.every().tuesday.at('23:30').do(slacker)
-schedule.every().wednesday.at('23:30').do(slacker)
-schedule.every().thursday.at('23:30').do(slacker)
-schedule.every().friday.at('23:30').do(slacker)
+schedule.every().monday.at('08:30').do(slacker)
+schedule.every().tuesday.at('08:30').do(slacker)
+schedule.every().wednesday.at('08:30').do(slacker)
+schedule.every().thursday.at('08:30').do(slacker)
+schedule.every().friday.at('08:30').do(slacker)
 
 while True:
     schedule.run_pending()

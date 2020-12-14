@@ -5,12 +5,15 @@ from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
 TOKEN = config('TOKEN')
+channel = '#test'
+message = ':bell: 오늘 무슨 일을 하시나요?'
+
 client = WebClient(token=TOKEN)
 
 def slacker():
     try:
-        response = client.chat_postMessage(channel='#test', text=':bell: 오늘 무슨 일을 하시나요?')
-        assert response['message']['text'] == ':bell: 오늘 무슨 일을 하시나요?'
+        response = client.chat_postMessage(channel=channel, text=message)
+        assert response['message']['text'] == message
     except SlackApiError as error:
         # You will get a SlackApiError if 'ok' is False
         assert error.response['ok'] is False

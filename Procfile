@@ -1,1 +1,1 @@
-worker: python slacker.py
+worker: python script.py

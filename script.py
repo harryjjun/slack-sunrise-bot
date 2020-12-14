@@ -5,7 +5,7 @@ from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
 TOKEN = config('TOKEN')
-channel = '#test'
+channel = '#remote-report'
 message = ':bell: 오늘 무슨 일을 하시나요?'
 
 client = WebClient(token=TOKEN)
